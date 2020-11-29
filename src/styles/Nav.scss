@@ -36,13 +36,14 @@ nav {
     color: #d0d0d0;
     letter-spacing: 3px;
     font-size: 18px;
-    padding: 0.3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 6px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     transition: ease-in-out 0.3s;
+    padding-bottom: 2px;
+    position: relative;
     &:hover {
-      background-color: rgba(139, 139, 139, 0.4);
+      border-bottom: 1px solid;
+      padding-bottom: 5px;
       color: #ffffff;
     }
   }

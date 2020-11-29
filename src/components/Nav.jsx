@@ -17,7 +17,8 @@ const Nav = () => {
           <li>
             <NavLink
               activeStyle={{
-                backgroundColor: "rgba(139, 139, 139, 0.6)",
+                borderBottom: "1px solid #ffffff",
+                paddingBottom: "5px",
                 color: "#ffffff",
               }}
               onClick={() => closeNav()}
@@ -29,7 +30,8 @@ const Nav = () => {
           <li>
             <NavLink
               activeStyle={{
-                backgroundColor: "rgba(139, 139, 139, 0.6)",
+                borderBottom: "1px solid #ffffff",
+                paddingBottom: "5px",
                 color: "#ffffff",
               }}
               onClick={() => closeNav()}
@@ -41,7 +43,8 @@ const Nav = () => {
           <li>
             <NavLink
               activeStyle={{
-                backgroundColor: "rgba(139, 139, 139, 0.6)",
+                borderBottom: "1px solid #ffffff",
+                paddingBottom: "5px",
                 color: "#ffffff",
               }}
               onClick={() => closeNav()}
@@ -53,7 +56,8 @@ const Nav = () => {
           <li>
             <NavLink
               activeStyle={{
-                backgroundColor: "rgba(139, 139, 139, 0.6)",
+                borderBottom: "1px solid #ffffff",
+                paddingBottom: "5px",
                 color: "#ffffff",
               }}
               onClick={() => closeNav()}
@@ -65,7 +69,8 @@ const Nav = () => {
           <li>
             <NavLink
               activeStyle={{
-                backgroundColor: "rgba(139, 139, 139, 0.6)",
+                borderBottom: "1px solid #ffffff",
+                paddingBottom: "5px",
                 color: "#ffffff",
               }}
               onClick={() => closeNav()}

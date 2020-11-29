@@ -8,12 +8,13 @@ const Home = () => {
   return (
     <>
       <section className="home-container">
-        <div>
+        <div className="image-container">
           <ProgressiveImage src={akin} placeholder={akinLow}>
             {(src) => (
-              <img className="landing" src={src} alt="Painting - Akin" />
+              <img className="landing-image" src={src} alt="Painting - Akin" />
             )}
           </ProgressiveImage>
+          <caption className="caption-title">Akin</caption>
         </div>
       </section>
     </>
