@@ -1,0 +1,161 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+  background-color: #171717;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  position: fixed;
+
+  .logo {
+    color: #d0d0d0;
+    letter-spacing: 2px;
+    font-size: 32px;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      color: #8b8b8b;
+    }
+
+    a {
+      font-weight: normal;
+      color: inherit;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    transition: ease-in-out 0.3s;
+    width: 40%;
+  }
+
+  .nav-links a {
+    color: #d0d0d0;
+    letter-spacing: 3px;
+    font-size: 18px;
+    padding: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 6px;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      background-color: rgba(139, 139, 139, 0.4);
+      color: #ffffff;
+    }
+  }
+
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #d9dcdf;
+    transition: all 0.3s ease;
+  }
+
+  @media screen and (max-width: 1520px) {
+    .nav-links {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .logo {
+      font-size: 28px;
+    }
+    .nav-links {
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .nav-links {
+      position: fixed;
+      right: 0;
+      height: 100vh;
+      top: 90px;
+      background-color: #171717;
+      background-position: 0 0;
+      background-attachment: fixed;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      display: none;
+      padding-bottom: 50vh;
+    }
+    .nav-links li {
+      opacity: 0;
+    }
+    .burger {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .nav-links {
+      width: 100%;
+      padding-bottom: 33vh;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .logo {
+      font-size: 21px;
+    }
+    .burger {
+      transform: scale(0.9);
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .logo {
+      font-size: 18px;
+    }
+    .burger {
+      transform: scale(0.8);
+    }
+  }
+
+  .nav-active {
+    animation: fadeIn 0.3s;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
