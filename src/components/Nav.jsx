@@ -10,7 +10,10 @@ const Nav = () => {
       <nav>
         <div className="logo">
           <h4>
-            <Link to={"/home"}>Art by David Jardine</Link>
+            <Link to={"/home"}>
+              Art by D<span className="remove">avid</span> J
+              <span className="remove">ardine</span>
+            </Link>
           </h4>
         </div>
         <ul className="nav-links">

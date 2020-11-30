@@ -19,7 +19,6 @@ const Statement = () => {
                 />
               )}
             </ProgressiveImage>
-            <caption className="caption-title">Conversation</caption>
           </div>
           <div className="statement-text">
             <h1>Artist Statement</h1>
@@ -31,14 +30,14 @@ const Statement = () => {
               curious about these altered states, and the perspectives they may
               have to offer me in my daily reality.
             </p>
-            <br />
+
             <p>
               My work is an examination of these states of awareness. I like to
               work quickly, in an automatic manner, to produce work that offers
               a glimpse into these internal spaces. These spaces are often
               abstract, primal, and emotive.
             </p>
-            <br />
+
             <p>
               I am inspired by aspects of surrealism, automatism, abstract
               expressionism, and street art or graffiti. I like the
@@ -53,7 +52,7 @@ const Statement = () => {
               saturated colors, which give more life to the ideas and concepts I
               am portraying.
             </p>
-            <br />
+
             <p>
               I am also interested in sculpture. Using a similar approach to my
               early stages of painting, I like to work quickly, drawing and
@@ -66,7 +65,7 @@ const Statement = () => {
               necessarily in a gallery or exhibition. I believe it is important
               for people to come face to face with art everyday.
             </p>
-            <br />
+
             <p>
               Some artists I am currently inspired by are Doze Green, Mario
               Martinez, Marco Cochrane, David Robinson, Georges Braque,

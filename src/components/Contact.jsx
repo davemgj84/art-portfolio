@@ -19,7 +19,6 @@ const Contact = () => {
                 />
               )}
             </ProgressiveImage>
-            <caption className="caption-title">Fruition</caption>
           </div>
           <div className="contact-text">
             <h1>Contact</h1>

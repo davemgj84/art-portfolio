@@ -22,7 +22,6 @@ const Bio = () => {
                 />
               )}
             </ProgressiveImage>
-            <caption className="caption-title">Autonomous Oppidan</caption>
           </div>
           <div className="bio-text">
             <h1>About the Artist</h1>
