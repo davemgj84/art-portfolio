@@ -10,6 +10,8 @@ import "./index.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
+import Painting from "./components/Painting";
+import Sculpture from "./components/Sculpture";
 import Bio from "./components/Bio";
 import Statement from "./components/Statement";
 import Contact from "./components/Contact";
@@ -34,6 +36,8 @@ function App() {
           </Route>
           <Route path="/home" component={Home} />
           <Route path="/gallery" component={Gallery} />
+          <Route path="/painting" component={Painting} />
+          <Route path="/sculpture" component={Sculpture} />
           <Route path="/bio" component={Bio} />
           <Route path="/statement" component={Statement} />
           <Route path="/contact" component={Contact} />

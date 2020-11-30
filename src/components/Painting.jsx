@@ -1,13 +1,13 @@
 import React from "react";
 // import ProgressiveImage from "react-progressive-graceful-image";
-import "../styles/Gallery.scss";
+import "../styles/Painting.scss";
 
-const Gallery = () => {
+const Painting = () => {
   return (
     <>
-      <section className="gallery"></section>
+      <section className="painting"></section>
     </>
   );
 };
 
-export default Gallery;
+export default Painting;
