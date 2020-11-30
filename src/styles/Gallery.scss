@@ -1,0 +1,142 @@
+.gallery {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 80px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    width: 500px;
+    transition: ease-in-out 0.3s;
+    animation: fadeInSlide 0.6s;
+
+    hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      height: 1px;
+      background-color: #8b8b8b;
+      border-width: 0;
+      border-style: none;
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 540px;
+    margin-top: 1rem;
+    transition: ease-in-out 0.3s;
+    animation: fadeInSlide 0.6s;
+  }
+
+  button {
+    padding: 1rem 0 1rem 0;
+    font-size: 32px;
+    letter-spacing: 1px;
+    box-shadow: 8px 8px 12px #797977;
+    transition: ease-in-out 0.3s;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #8b8b8b;
+    width: 200px;
+    &:hover {
+      background-color: #2e2e2e;
+      color: #d0d0d0;
+      animation: bounce 1.3s ease-in-out infinite;
+    }
+  }
+
+  .paint-btn {
+    background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
+  }
+  .sculpt-btn {
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    // background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+// MAX WIDTH RESPONSIVE:
+
+@media screen and (max-width: 768px) {
+  .gallery h1 {
+    font-size: 38px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .gallery h1 {
+    font-size: 36px;
+    width: 240px;
+    margin-bottom: 0;
+  }
+  .gallery div {
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    width: 100%;
+  }
+  .gallery button {
+    font-size: 28px;
+    width: 160px;
+  }
+}
+
+// MAX HEIGHT RESPONSIVE:
+
+@media screen and (max-height: 540px) {
+  .gallery h1 {
+    font-size: 32px;
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+  .gallery button {
+    font-size: 28px;
+    width: 160px;
+  }
+}
+
+@media screen and (max-height: 320px) {
+  .gallery h1 {
+    font-size: 26px;
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+  .gallery button {
+    padding: 0.75rem 0 0.75rem 0;
+    font-size: 24px;
+    width: 140px;
+  }
+}
