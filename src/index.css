@@ -16,7 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #f2f3ef;
-  background-image: url("https://www.transparenttextures.com/patterns/white-wall.png");
+  background-image: url("../src/assets/background-images/white-wall.png");
   background-attachment: fixed;
   background-position: 0 0;
 }

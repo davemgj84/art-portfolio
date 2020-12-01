@@ -50,19 +50,19 @@
     border-radius: 10px;
     background-color: #8b8b8b;
     width: 200px;
+    cursor: pointer;
     &:hover {
       background-color: #2e2e2e;
       color: #d0d0d0;
-      animation: bounce 1.3s ease-in-out infinite;
+      animation: bounce 1s ease-in-out infinite;
     }
   }
 
   .paint-btn {
-    background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
+    background-image: url("../assets/background-images/subtle-white-feathers.png");
   }
   .sculpt-btn {
-    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
-    // background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+    background-image: url("../assets/background-images/clean-gray-paper.png");
   }
 }
 
@@ -72,7 +72,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
   }
 }
 

@@ -4,7 +4,7 @@ nav {
   align-items: center;
   height: 80px;
   background-color: #171717;
-  background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
+  background-image: url("../assets/background-images/rocky-wall.png");
   z-index: 1;
   top: 0;
   width: 100%;
@@ -61,18 +61,21 @@ nav {
 
   .dropdown {
     position: absolute;
-    width: 170px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    width: 160px;
     top: 80px;
     left: -25px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: #171717;
-    background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
+    background-image: url("../assets/background-images/rocky-wall.png");
     background-position: 0 0;
     background-attachment: fixed;
-    opacity: 0;
+    transition: ease-in-out 0.2s;
 
-    li {
+    div {
       display: flex;
       align-items: center;
       height: 50px;
@@ -85,12 +88,16 @@ nav {
       &:hover {
         border-bottom: 0;
         color: #ffffff;
+        margin-left: 1.8rem;
+        margin-top: 3px;
       }
     }
   }
 
   .drop:hover > .dropdown {
+    visibility: visible;
     opacity: 1;
+    pointer-events: visible;
   }
 
   .burger {
@@ -136,12 +143,16 @@ nav {
       width: 50%;
       display: none;
       padding-bottom: 50vh;
+      transition: opacity 1s ease-out;
     }
     .nav-links li {
       opacity: 0;
     }
+    .nav-links a {
+      padding-bottom: 0;
+    }
     .dropdown {
-      display: none;
+      display: none !important;
     }
     .burger {
       display: block;

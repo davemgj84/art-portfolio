@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import openNav from "../helpers/openNav";
 import closeNav from "../helpers/closeNav";
+import closeMenu from "../helpers/closeMenu";
 import "../styles/Nav.scss";
 
 const Nav = () => {
@@ -43,12 +44,16 @@ const Nav = () => {
               Gallery
             </NavLink>
             <ul className="dropdown">
-              <li>
-                <a href="#">Painting</a>
-              </li>
-              <li>
-                <a href="#">Sculpture</a>
-              </li>
+              <div>
+                <Link to={"/painting"} onClick={() => closeMenu()}>
+                  Painting
+                </Link>
+              </div>
+              <div>
+                <Link to={"/sculpture"} onClick={() => closeMenu()}>
+                  Sculpture
+                </Link>
+              </div>
             </ul>
           </li>
           <li>
