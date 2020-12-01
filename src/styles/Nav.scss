@@ -31,6 +31,12 @@ nav {
     z-index: 1;
     transition: ease-in-out 0.3s;
     width: 40%;
+    height: 100%;
+    li {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
   }
 
   .nav-links a {
@@ -39,14 +45,52 @@ nav {
     font-weight: bold;
     color: #d0d0d0;
     transition: ease-in-out 0.2s;
-    padding-bottom: 1px;
     position: relative;
+    padding-bottom: 1px;
     &:hover {
       border-bottom: 2px solid;
       border-color: rgba(255, 255, 255, 0.5);
       padding-bottom: 4px;
       color: #ffffff;
     }
+  }
+
+  .drop {
+    position: relative;
+  }
+
+  .dropdown {
+    position: absolute;
+    width: 170px;
+    top: 80px;
+    left: -25px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #171717;
+    background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
+    background-position: 0 0;
+    background-attachment: fixed;
+    opacity: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      border-top: 2px solid #454545;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    a {
+      margin-left: 1.5rem;
+      &:hover {
+        border-bottom: 0;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .drop:hover > .dropdown {
+    opacity: 1;
   }
 
   .burger {
@@ -95,6 +139,9 @@ nav {
     }
     .nav-links li {
       opacity: 0;
+    }
+    .dropdown {
+      display: none;
     }
     .burger {
       display: block;

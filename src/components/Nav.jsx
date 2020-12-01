@@ -30,7 +30,7 @@ const Nav = () => {
               Home
             </NavLink>
           </li>
-          <li>
+          <li className="drop">
             <NavLink
               activeStyle={{
                 borderBottom: "2px solid #ffffff",
@@ -42,6 +42,14 @@ const Nav = () => {
             >
               Gallery
             </NavLink>
+            <ul className="dropdown">
+              <li>
+                <a href="#">Painting</a>
+              </li>
+              <li>
+                <a href="#">Sculpture</a>
+              </li>
+            </ul>
           </li>
           <li>
             <NavLink
