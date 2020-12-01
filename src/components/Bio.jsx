@@ -1,8 +1,8 @@
 import React from "react";
 import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Bio.scss";
-import autonomousOppidan from "../assets/autonomousOppidan.jpg";
-import autonomousOppidanLow from "../assets/autonomousOppidanLow.jpg";
+import autonomousOppidan from "../assets/Bio/autonomousOppidan.jpg";
+import autonomousOppidanLow from "../assets/Bio/autonomousOppidanLow.jpg";
 
 const Bio = () => {
   return (

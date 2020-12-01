@@ -1,8 +1,8 @@
 import React from "react";
 import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Contact.scss";
-import fruition from "../assets/fruition.jpg";
-import fruitionLow from "../assets/fruitionLow.jpg";
+import fruition from "../assets/Contact/fruition.jpg";
+import fruitionLow from "../assets/Contact/fruitionLow.jpg";
 
 const Contact = () => {
   return (

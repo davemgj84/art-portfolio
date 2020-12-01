@@ -1,8 +1,8 @@
 import React from "react";
 import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Home.scss";
-import akin from "../assets/akin.jpg";
-import akinLow from "../assets/akinLow.jpg";
+import akin from "../assets/Home/akin.jpg";
+import akinLow from "../assets/Home/akinLow.jpg";
 
 const Home = () => {
   return (

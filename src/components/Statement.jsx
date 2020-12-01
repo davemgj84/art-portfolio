@@ -1,8 +1,8 @@
 import React from "react";
 import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Statement.scss";
-import conversation from "../assets/conversation.jpg";
-import conversationLow from "../assets/conversationLow.jpg";
+import conversation from "../assets/Statement/conversation.jpg";
+import conversationLow from "../assets/Statement/conversationLow.jpg";
 
 const Statement = () => {
   return (
