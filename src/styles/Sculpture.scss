@@ -1,0 +1,87 @@
+.sculpture {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  position: relative;
+
+  .sculpture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .slide {
+      height: auto;
+      max-width: 500px;
+      box-shadow: 15px 20px 30px #797977;
+      transition: ease-in-out 0.3s;
+      animation: fadeInSlide 0.6s;
+    }
+  }
+
+  .info-container {
+    height: 70vh;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8rem;
+  }
+
+  .info {
+    width: 250px;
+    background-color: #f3f4f0;
+    background-image: url("../assets/background-images/handmade-paper.png");
+    align-self: flex-end;
+    border-radius: 10px;
+    padding: 1rem 2rem 1rem 2rem;
+    border: 1px solid rgba(115, 115, 115, 0.3);
+    box-shadow: 2px 4px 8px #797977;
+    transition: ease-in-out 0.3s;
+    animation: fadeInSlide 0.6s;
+
+    .title {
+      font-size: 16px;
+      font-weight: normal;
+      color: #737373;
+    }
+
+    h3 {
+      font-weight: normal;
+      color: #737373;
+      font-size: 16px;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .arrow-btns {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(115, 115, 115, 0.3);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .fas {
+      color: rgba(115, 115, 115, 0.4);
+      transition: 0.3s color;
+      &:hover {
+        color: #737373;
+      }
+    }
+  }
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
