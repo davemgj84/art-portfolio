@@ -28,21 +28,21 @@ const Contact = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <i class="far fa-envelope"></i>info@artbydavidjardine.com
+              <i className="far fa-envelope"></i>info@artbydavidjardine.com
             </a>
             <a
               href="https://www.instagram.com/david_jardine_art/?hl=en"
               rel="noreferrer"
               target="_blank"
             >
-              <i class="fab fa-instagram"></i>Instagram
+              <i className="fab fa-instagram"></i>Instagram
             </a>
             <a
               href="https://www.facebook.com/Art-by-David-Jardine-436081926483381"
               rel="noreferrer"
               target="_blank"
             >
-              <i class="fab fa-facebook"></i>Facebook
+              <i className="fab fa-facebook"></i>Facebook
             </a>
           </div>
         </div>

@@ -25,7 +25,7 @@ const Nav = () => {
                 paddingBottom: "4px",
                 color: "#ffffff",
               }}
-              onClick={() => closeNav()}
+              onClick={closeNav}
               to={"/home"}
             >
               Home
@@ -38,19 +38,19 @@ const Nav = () => {
                 paddingBottom: "4px",
                 color: "#ffffff",
               }}
-              onClick={() => closeNav()}
+              onClick={closeNav}
               to={"/gallery"}
             >
               Gallery
             </NavLink>
             <ul className="dropdown">
               <div>
-                <Link to={"/painting"} onClick={() => closeMenu()}>
+                <Link to={"/painting"} onClick={closeMenu}>
                   Painting
                 </Link>
               </div>
               <div>
-                <Link to={"/sculpture"} onClick={() => closeMenu()}>
+                <Link to={"/sculpture"} onClick={closeMenu}>
                   Sculpture
                 </Link>
               </div>
@@ -63,7 +63,7 @@ const Nav = () => {
                 paddingBottom: "4px",
                 color: "#ffffff",
               }}
-              onClick={() => closeNav()}
+              onClick={closeNav}
               to={"/bio"}
             >
               Bio
@@ -76,7 +76,7 @@ const Nav = () => {
                 paddingBottom: "4px",
                 color: "#ffffff",
               }}
-              onClick={() => closeNav()}
+              onClick={closeNav}
               to={"/statement"}
             >
               Artist Statement
@@ -89,14 +89,14 @@ const Nav = () => {
                 paddingBottom: "4px",
                 color: "#ffffff",
               }}
-              onClick={() => closeNav()}
+              onClick={closeNav}
               to={"/contact"}
             >
               Contact
             </NavLink>
           </li>
         </ul>
-        <div onClick={() => openNav()} className="burger">
+        <div onClick={openNav} className="burger">
           <div className="line1"></div>
           <div className="line2"></div>
           <div className="line3"></div>

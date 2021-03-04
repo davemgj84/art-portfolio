@@ -33,7 +33,7 @@ const Painting = () => {
             <div className="arrow-btns">
               {index !== 0 ? (
                 <i
-                  onClick={() => back()}
+                  onClick={back}
                   className="fas fa-chevron-circle-left fa-2x"
                 ></i>
               ) : (
@@ -45,7 +45,7 @@ const Painting = () => {
 
               {index !== totalArtwork ? (
                 <i
-                  onClick={() => next()}
+                  onClick={next}
                   className="fas fa-chevron-circle-right fa-2x"
                 ></i>
               ) : (
