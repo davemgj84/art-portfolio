@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Gallery.scss";
 
 const Gallery = () => {

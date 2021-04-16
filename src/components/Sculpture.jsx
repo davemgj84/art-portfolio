@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ProgressiveImage from "react-progressive-graceful-image";
-import sculptureObjects from "../helpers/sculptureObjects";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import sculptureObjects from "../db/sculptureObjects";
 import "../styles/Sculpture.scss";
 
 const Sculpture = () => {
@@ -21,9 +21,13 @@ const Sculpture = () => {
     <>
       <section className="sculpture">
         <div className="sculpture-container">
-          <ProgressiveImage src={artwork.high} placeholder={artwork.low}>
-            {(src) => <img className="slide" src={src} alt={artwork.title} />}
-          </ProgressiveImage>
+          <LazyLoadImage
+            className="slide"
+            alt={artwork.title}
+            src={artwork.high}
+            effect="blur"
+            placeholderSrc={artwork.low}
+          />
         </div>
         <div className="info-container">
           <div className="info">
@@ -33,7 +37,7 @@ const Sculpture = () => {
             <div className="arrow-btns">
               {index !== 0 ? (
                 <i
-                  onClick={() => back()}
+                  onClick={back}
                   className="fas fa-chevron-circle-left fa-2x"
                 ></i>
               ) : (
@@ -45,7 +49,7 @@ const Sculpture = () => {
 
               {index !== totalArtwork ? (
                 <i
-                  onClick={() => next()}
+                  onClick={next}
                   className="fas fa-chevron-circle-right fa-2x"
                 ></i>
               ) : (

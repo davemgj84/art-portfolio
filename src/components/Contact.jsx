@@ -1,5 +1,5 @@
 import React from "react";
-import ProgressiveImage from "react-progressive-graceful-image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../styles/Contact.scss";
 import fruition from "../assets/Contact/fruition.jpg";
 import fruitionLow from "../assets/Contact/fruitionLow.jpg";
@@ -10,15 +10,13 @@ const Contact = () => {
       <section className="contact">
         <div className="contact-container">
           <div className="image-container">
-            <ProgressiveImage src={fruition} placeholder={fruitionLow}>
-              {(src) => (
-                <img
-                  className="contact-image"
-                  src={src}
-                  alt="Painting - Autonomous Oppidan"
-                />
-              )}
-            </ProgressiveImage>
+            <LazyLoadImage
+              className="contact-image"
+              alt={"Painting - Autonomous Oppidan"}
+              src={fruition}
+              effect="blur"
+              placeholderSrc={fruitionLow}
+            />
           </div>
           <div className="contact-text">
             <h1>Contact</h1>

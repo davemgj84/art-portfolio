@@ -1,5 +1,4 @@
 import React from "react";
-import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Statement.scss";
 import conversation from "../assets/Statement/conversation.jpg";
 import conversationLow from "../assets/Statement/conversationLow.jpg";
@@ -10,7 +9,7 @@ const Statement = () => {
       <section className="statement">
         <div className="statement-container">
           <div className="image-container">
-            <ProgressiveImage src={conversation} placeholder={conversationLow}>
+            {/* <ProgressiveImage src={conversation} placeholder={conversationLow}>
               {(src) => (
                 <img
                   className="statement-image"
@@ -18,7 +17,7 @@ const Statement = () => {
                   alt="Painting - Conversation"
                 />
               )}
-            </ProgressiveImage>
+            </ProgressiveImage> */}
           </div>
           <div className="statement-text">
             <h1>Artist Statement</h1>

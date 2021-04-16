@@ -1,6 +1,6 @@
 import React from "react";
-import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Bio.scss";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import autonomousOppidan from "../assets/Bio/autonomousOppidan.jpg";
 import autonomousOppidanLow from "../assets/Bio/autonomousOppidanLow.jpg";
 
@@ -10,18 +10,13 @@ const Bio = () => {
       <section className="bio">
         <div className="bio-container">
           <div className="image-container">
-            <ProgressiveImage
+            <LazyLoadImage
+              className="bio-image"
+              alt={"Painting - Autonomous Oppidan"}
               src={autonomousOppidan}
-              placeholder={autonomousOppidanLow}
-            >
-              {(src) => (
-                <img
-                  className="bio-image"
-                  src={src}
-                  alt="Painting - Autonomous Oppidan"
-                />
-              )}
-            </ProgressiveImage>
+              effect="blur"
+              placeholderSrc={autonomousOppidanLow}
+            />
           </div>
           <div className="bio-text">
             <h1>About the Artist</h1>

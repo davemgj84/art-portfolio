@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ProgressiveImage from "react-progressive-graceful-image";
-import paintingObjects from "../helpers/paintingObjects";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import paintingObjects from "../db/paintingObjects";
 import "../styles/Painting.scss";
 
 const Painting = () => {
@@ -21,9 +21,13 @@ const Painting = () => {
     <>
       <section className="painting">
         <div className="painting-container">
-          <ProgressiveImage src={artwork.high} placeholder={artwork.low}>
-            {(src) => <img className="slide" src={src} alt={artwork.title} />}
-          </ProgressiveImage>
+          <LazyLoadImage
+            className="slide"
+            alt={artwork.title}
+            src={artwork.high}
+            effect="blur"
+            placeholderSrc={artwork.low}
+          />
         </div>
         <div className="info-container">
           <div className="info">

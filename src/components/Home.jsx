@@ -1,6 +1,6 @@
 import React from "react";
-import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Home.scss";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import akin from "../assets/Home/akin.jpg";
 import akinLow from "../assets/Home/akinLow.jpg";
 
@@ -9,11 +9,13 @@ const Home = () => {
     <>
       <section className="home-container">
         <div className="image-container">
-          <ProgressiveImage src={akin} placeholder={akinLow}>
-            {(src) => (
-              <img className="landing-image" src={src} alt="Painting - Akin" />
-            )}
-          </ProgressiveImage>
+          <LazyLoadImage
+            className="landing-image"
+            alt={"Painting - Akin"}
+            src={akin}
+            effect="blur"
+            placeholderSrc={akinLow}
+          />
         </div>
       </section>
     </>
