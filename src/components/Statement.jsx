@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Statement.scss";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import conversation from "../assets/Statement/conversation.jpg";
 import conversationLow from "../assets/Statement/conversationLow.jpg";
 
@@ -9,15 +11,13 @@ const Statement = () => {
       <section className="statement">
         <div className="statement-container">
           <div className="image-container">
-            {/* <ProgressiveImage src={conversation} placeholder={conversationLow}>
-              {(src) => (
-                <img
-                  className="statement-image"
-                  src={src}
-                  alt="Painting - Conversation"
-                />
-              )}
-            </ProgressiveImage> */}
+            <LazyLoadImage
+              className="statement-image"
+              alt="Painting - Conversation"
+              src={conversation}
+              effect="blur"
+              placeholderSrc={conversationLow}
+            />
           </div>
           <div className="statement-text">
             <h1>Artist Statement</h1>
