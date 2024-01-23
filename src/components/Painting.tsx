@@ -3,7 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useState } from "react";
 
 import "../styles/Painting.scss";
-import { paintings } from "../db/paintings";
+import { paintings } from "../data/paintings";
 
 export default function Painting() {
   const [index, setIndex] = useState<number>(0);

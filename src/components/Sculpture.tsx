@@ -3,7 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useState } from "react";
 
 import "../styles/Sculpture.scss";
-import { sculptures } from "../db/sculptures";
+import { sculptures } from "../data/sculptures";
 
 export default function Sculpture() {
   const [index, setIndex] = useState<number>(0);
