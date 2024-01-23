@@ -1,11 +1,11 @@
-import React from "react";
-import "../styles/Home.scss";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+import "../styles/Home.scss";
 import akin from "../assets/Home/akin.jpg";
 import akinLow from "../assets/Home/akinLow.jpg";
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <section className="home-container">
@@ -21,6 +21,4 @@ const Home = () => {
       </section>
     </>
   );
-};
-
-export default Home;
+}

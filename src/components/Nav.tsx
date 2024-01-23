@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 import "../styles/Nav.scss";
 
-const Nav = () => {
-  const [navActive, setNavActive] = useState(false);
-  const [hideMenu, setHideMenu] = useState(false);
+export default function Nav() {
+  const [navActive, setNavActive] = useState<boolean>(false);
+  const [hideMenu, setHideMenu] = useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => {
       setHideMenu(false);
     }, 30);
   }, [hideMenu]);
+
+  function handleNavigation() {
+    window.scrollTo(0, 0);
+    setNavActive(false);
+  }
 
   return (
     <>
@@ -26,12 +32,12 @@ const Nav = () => {
         <ul className={navActive ? "nav-active nav-links" : "nav-links"}>
           <li>
             <NavLink
-              activeStyle={{
-                borderBottom: "2px solid #ffffff",
-                paddingBottom: "4px",
-                color: "#ffffff",
-              }}
-              onClick={() => setNavActive(false)}
+              style={({ isActive }) => ({
+                borderBottom: isActive ? "2px solid #ffffff" : "",
+                paddingBottom: isActive ? "4px" : "1px",
+                color: isActive ? "#ffffff" : "#d0d0d0",
+              })}
+              onClick={handleNavigation}
               to={"/home"}
             >
               Home
@@ -39,12 +45,12 @@ const Nav = () => {
           </li>
           <li className="drop">
             <NavLink
-              activeStyle={{
-                borderBottom: "2px solid #ffffff",
-                paddingBottom: "4px",
-                color: "#ffffff",
-              }}
-              onClick={() => setNavActive(false)}
+              style={({ isActive }) => ({
+                borderBottom: isActive ? "2px solid #ffffff" : "",
+                paddingBottom: isActive ? "4px" : "1px",
+                color: isActive ? "#ffffff" : "#d0d0d0",
+              })}
+              onClick={handleNavigation}
               to={"/gallery"}
             >
               Gallery
@@ -64,12 +70,12 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              activeStyle={{
-                borderBottom: "2px solid #ffffff",
-                paddingBottom: "4px",
-                color: "#ffffff",
-              }}
-              onClick={() => setNavActive(false)}
+              style={({ isActive }) => ({
+                borderBottom: isActive ? "2px solid #ffffff" : "",
+                paddingBottom: isActive ? "4px" : "1px",
+                color: isActive ? "#ffffff" : "#d0d0d0",
+              })}
+              onClick={handleNavigation}
               to={"/bio"}
             >
               Bio
@@ -77,12 +83,12 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              activeStyle={{
-                borderBottom: "2px solid #ffffff",
-                paddingBottom: "4px",
-                color: "#ffffff",
-              }}
-              onClick={() => setNavActive(false)}
+              style={({ isActive }) => ({
+                borderBottom: isActive ? "2px solid #ffffff" : "",
+                paddingBottom: isActive ? "4px" : "1px",
+                color: isActive ? "#ffffff" : "#d0d0d0",
+              })}
+              onClick={handleNavigation}
               to={"/statement"}
             >
               Artist Statement
@@ -90,12 +96,12 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              activeStyle={{
-                borderBottom: "2px solid #ffffff",
-                paddingBottom: "4px",
-                color: "#ffffff",
-              }}
-              onClick={() => setNavActive(false)}
+              style={({ isActive }) => ({
+                borderBottom: isActive ? "2px solid #ffffff" : "",
+                paddingBottom: isActive ? "4px" : "1px",
+                color: isActive ? "#ffffff" : "#d0d0d0",
+              })}
+              onClick={handleNavigation}
               to={"/contact"}
             >
               Contact
@@ -113,6 +119,4 @@ const Nav = () => {
       </nav>
     </>
   );
-};
-
-export default Nav;
+}

@@ -1,11 +1,11 @@
-import React from "react";
-import "../styles/Statement.scss";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+import "../styles/Statement.scss";
 import conversation from "../assets/Statement/conversation.jpg";
 import conversationLow from "../assets/Statement/conversationLow.jpg";
 
-const Statement = () => {
+export default function Statement() {
   return (
     <>
       <section className="statement">
@@ -75,6 +75,4 @@ const Statement = () => {
       </section>
     </>
   );
-};
-
-export default Statement;
+}

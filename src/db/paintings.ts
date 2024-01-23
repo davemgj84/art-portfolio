@@ -1,3 +1,5 @@
+import { IArt } from "../interfaces/IArt";
+
 import time1 from "../assets/Gallery/Painting/Dilation-of-Time-1.jpg";
 import time1Low from "../assets/Gallery/Painting/Dilation-of-Time-1Low.jpg";
 import time2 from "../assets/Gallery/Painting/Dilation-of-Time-2.jpg";
@@ -7,7 +9,7 @@ import time3Low from "../assets/Gallery/Painting/Dilation-of-Time-3Low.jpg";
 import akin from "../assets/Gallery/Painting/akin.jpg";
 import akinLow from "../assets/Gallery/Painting/akinLow.jpg";
 
-const paintingObjects = [
+export const paintings: IArt[] = [
   {
     high: time1,
     low: time1Low,
@@ -37,5 +39,3 @@ const paintingObjects = [
     medium: "Acrylic on Canvas",
   },
 ];
-
-export default paintingObjects;

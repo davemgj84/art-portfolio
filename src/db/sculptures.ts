@@ -1,3 +1,5 @@
+import { IArt } from "../interfaces/IArt";
+
 import fylo from "../assets/Gallery/Sculpture/fylo.jpg";
 import fyloLow from "../assets/Gallery/Sculpture/fyloLow.jpg";
 import vitality from "../assets/Gallery/Sculpture/vitality.jpg";
@@ -9,7 +11,7 @@ import godheadLow from "../assets/Gallery/Sculpture/godheadLow.jpg";
 import godheadAndMe from "../assets/Gallery/Sculpture/godhead-and-me.jpg";
 import godheadAndMeLow from "../assets/Gallery/Sculpture/godhead-and-meLow.jpg";
 
-const sculptureObjects = [
+export const sculptures: IArt[] = [
   {
     high: fylo,
     low: fyloLow,
@@ -46,5 +48,3 @@ const sculptureObjects = [
     medium: "Steel, Hydro-stone",
   },
 ];
-
-export default sculptureObjects;

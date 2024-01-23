@@ -1,27 +1,28 @@
-import React, { useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import paintingObjects from "../db/paintingObjects";
-import "../styles/Painting.scss";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useState } from "react";
 
-const Painting = () => {
-  const [index, setIndex] = useState(0);
+import "../styles/Sculpture.scss";
+import { sculptures } from "../db/sculptures";
 
-  const next = () => {
+export default function Sculpture() {
+  const [index, setIndex] = useState<number>(0);
+
+  const handleNext = () => {
     setIndex((prev) => prev + 1);
   };
 
-  const back = () => {
+  const handleBack = () => {
     setIndex((prev) => prev - 1);
   };
 
-  const artwork = paintingObjects[index];
-  const totalArtwork = paintingObjects.length - 1;
+  const artwork = sculptures[index];
+  const totalArtwork = sculptures.length - 1;
 
   return (
     <>
-      <section className="painting">
-        <div className="painting-container">
+      <section className="sculpture">
+        <div className="sculpture-container">
           <LazyLoadImage
             className="slide"
             alt={artwork.title}
@@ -38,7 +39,7 @@ const Painting = () => {
             <div className="arrow-btns">
               {index !== 0 ? (
                 <i
-                  onClick={back}
+                  onClick={handleBack}
                   className="fas fa-chevron-circle-left fa-2x"
                 ></i>
               ) : (
@@ -50,7 +51,7 @@ const Painting = () => {
 
               {index !== totalArtwork ? (
                 <i
-                  onClick={next}
+                  onClick={handleNext}
                   className="fas fa-chevron-circle-right fa-2x"
                 ></i>
               ) : (
@@ -65,6 +66,4 @@ const Painting = () => {
       </section>
     </>
   );
-};
-
-export default Painting;
+}

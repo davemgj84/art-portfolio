@@ -1,8 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
+
 import "../styles/Gallery.scss";
 
-const Gallery = () => {
+export default function Gallery() {
   return (
     <>
       <section className="gallery">
@@ -21,6 +21,4 @@ const Gallery = () => {
       </section>
     </>
   );
-};
-
-export default Gallery;
+}
